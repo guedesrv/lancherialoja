@@ -1,0 +1,29 @@
+{% extends 'global/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h1 class="small--text-center">Entre em contato</h1>
+<div class="contact-form form-vertical">
+  <form method="post" action="." id="contact_form" class="contact-form" accept-charset="UTF-8"><input type="hidden" value="contact" name="form_type"><input type="hidden" name="utf8" value="✓">
+
+    
+
+    
+
+    <label for="ContactFormName" class="label--hidden">Nome</label>
+    <input type="text" id="ContactFormName" name="contact[name]" placeholder="Nome" autocapitalize="words" value="">
+
+    <label for="ContactFormEmail" class="label--hidden">Email</label>
+    <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value="">
+
+    <label for="ContactFormPhone" class="label--hidden">Telefone</label>
+    <input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="Telefone" pattern="[0-9\-]*" value="">
+
+    <label for="ContactFormMessage" class="label--hidden">Mensagem</label>
+    <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Memsagem"></textarea>
+
+    <input type="submit" class="btn" value="Enviar">
+
+  </form>
+</div>
+{% endblock %}

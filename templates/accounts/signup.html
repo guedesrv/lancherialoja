@@ -1,0 +1,28 @@
+{% extends 'global/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h1 class="small--text-center">Criar conta</h1>
+<div class="form-register form-vertical">
+  <form method="post" action="." id="create_customer" accept-charset="UTF-8"><input type="hidden" value="create_customer" name="form_type"><input type="hidden" name="utf8" value="✓">
+
+    
+    <label for="FirstName" class="label--hidden">Nome</label>
+    <input type="text" name="customer[first_name]" id="FirstName" placeholder="Nome" autocapitalize="words" autofocus="">
+
+    <label for="LastName" class="label--hidden">Sobrenome</label>
+    <input type="text" name="customer[last_name]" id="LastName" placeholder="Sobrenome" autocapitalize="words">
+
+    <label for="Email" class="label--hidden">Email</label>
+    <input type="email" name="customer[email]" id="Email" class="" placeholder="Email" autocorrect="off" autocapitalize="off">
+
+    <label for="CreatePassword" class="label--hidden">Senha</label>
+    <input type="password" name="customer[password]" id="CreatePassword" class="" placeholder="Senha">
+
+    <p>
+      <input type="submit" value="Criar" class="btn">
+    </p>
+
+  </form>
+</div>
+{% endblock %}

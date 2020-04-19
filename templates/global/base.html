@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+    {% block head %}
+        {% include 'global/head.html' %}
+    {% endblock %}
+
+<body id="simple-ecommerce-theme-demo-store" class="template-index">
+    <div class="site-wrapper">
+        <div id="shopify-section-header" class="shopify-section">
+            {% include 'global/header.html' %}
+        </div>
+        <div class="grid">
+            {% include 'global/menu.html' %}
+
+            <main class="main-content grid__item medium-up--four-fifths" id="MainContent" role="main">
+                <hr class="hr--border-top small--hide">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+
+        <hr>
+        <div id="shopify-section-footer" class="shopify-section">
+            {% include 'global/footer.html' %}
+        </div>
+
+    </div>
+    {% include 'global/js.html' %}
+
+    {% block js_extras %}
+    {% endblock %}
+
+</body>
+
+</html>
